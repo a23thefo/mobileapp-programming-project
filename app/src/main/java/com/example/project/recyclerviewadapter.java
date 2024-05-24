@@ -14,10 +14,10 @@ import java.util.ArrayList;
 
 public class recyclerviewadapter extends RecyclerView.Adapter<recyclerviewadapter.MyViewHolder> {
     Context context;
-    ArrayList <Mountain> mountains;
-    public recyclerviewadapter(Context context, ArrayList<Mountain>mountains){
+    ArrayList <Lizards> lizards;
+    public recyclerviewadapter(Context context, ArrayList<Lizards> lizards){
         this.context =context;
-        this.mountains=mountains;
+        this.lizards = lizards;
     }
     @NonNull
     @Override
@@ -30,12 +30,12 @@ public class recyclerviewadapter extends RecyclerView.Adapter<recyclerviewadapte
 
     @Override
     public void onBindViewHolder(@NonNull recyclerviewadapter.MyViewHolder holder, int position) {
-        holder.textview.setText(mountains.get(position).getName());
+        holder.textview.setText(lizards.get(position).getName());
     }
 
     @Override
     public int getItemCount() {
-        return mountains.size();
+        return lizards.size();
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
