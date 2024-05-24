@@ -30,9 +30,9 @@ public class recyclerviewadapter extends RecyclerView.Adapter<recyclerviewadapte
 
     @Override
     public void onBindViewHolder(@NonNull recyclerviewadapter.MyViewHolder holder, int position) {
-        holder.textviewName.setText(lizards.get(position).getName());
+        holder.textviewName.setText(lizards.get(position).getName()+" | ");
         holder.textviewLocation.setText(lizards.get(position).getLocation());
-        holder.textviewCategory.setText(lizards.get(position).getCategory());
+        holder.textviewCategory.setText(lizards.get(position).getCategory()+" | ");
     }
 
     @Override
