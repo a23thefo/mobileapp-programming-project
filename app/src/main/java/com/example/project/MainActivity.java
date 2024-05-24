@@ -1,6 +1,8 @@
 package com.example.project;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -32,7 +34,10 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
     }
 
-
+    public void onButtonClickIntent(View button){
+        Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     public void onPostExecute(String json) {
